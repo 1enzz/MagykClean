@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(247, 243, 243);
+}
+*{
+   
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex-direction: row;
+    color: white;
+}
+
+.main-img {
+    width:px; 
+}
+.main-img img{
+    width: 168px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li {
+    transition: transform 0.5s;
+}
+
+.nav-list li:hover {
+    color: #2196F3;
+    transform: translateY(-5px); 
+    transition: 0.5s;
+}
+
+.content {
+
+    overflow: hidden;
+}
+
+
+.carrossel {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-images {
+    margin:4px;
+    display: flex;
+    width: 400%; 
+    animation: deslizar 12s infinite;
+}
+
+.carousel-images img {
+    width: 25%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-about{
+    margin:8px;
+}
+.content hr{
+
+    border: 0.5px solid #2195f350;
+    width: 25%;
+}
+
+
+.services{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.services-list{
+    display: grid;
+    flex-direction: row;
+}
+
+.services-list hr{
+    border: 0.5px solid #2196F3;
+    width: 100%;
+}
+.service-list {
+    list-style-type: disc;
+}
+.service-list li{
+    transition: transform 0.5s;
+}
+.service-list li:hover{
+    transform: translateY(-5px); 
+    transition: 0.5s;
+}
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); } 
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }  
+}
+
+li a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+}
