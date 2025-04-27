@@ -7,7 +7,8 @@
     <link rel="shortcut icon" type="imagex/png" href="./src/img/mclean2.ico">
     <link rel="stylesheet" href="./style/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+    <script src="./js/functions.js"></script>
+</head>
 <body>
     <div class="header">
         <div class="main-img">
@@ -15,9 +16,9 @@
         </div>
         <div class="header-content">
             <ul class="nav-list">
-                <li>Sobre</li>
-                <li>Serviços</li>
-                <li>Contatos</li>
+                <li onclick="divScroll('about')">Sobre</li>
+                <li onclick="divScroll('services')">Serviços</li>
+                <li onclick="divScroll('contact')">Contatos</li>
             </ul>
         </div>
     </div>
@@ -34,15 +35,24 @@
                 <img src="./src/img/dp2.jpg" alt="Slide 4">
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <h1>Sobre</h1>
             <hr>
             <div class="text-about">
-                <p>Fundada por Bruno Cuccolo em 2025 a Magyk Clean tem como objetivo oferecer serviços de limpeza de alta qualidade, para sneakers de alta qualidade.</p>
-                <p>Com um serviço focado nos detalhes, um trabalho artesanal que oferece carinho e cuidado com seu sneaker.</p>
+                <p>Fundada em 2025 por Bruno Cuccolo, a Magyk Clean nasceu da paixão pelos sneakers e do desejo de oferecer um serviço de limpeza especializado e diferenciado.
+
+                    Trabalhando de forma 100% manual e artesanal, Bruno transforma o cuidado com os tênis em uma verdadeira arte. Cada par é tratado com extrema atenção aos detalhes, utilizando técnicas específicas para cada tipo de material, sempre priorizando a preservação e a estética original do sneaker.
+                    
+                    O serviço é realizado dentro de casa, em um ambiente preparado para garantir a higienização correta e a restauração estética de cada calçado. Seja para uma limpeza leve, revitalização profunda, hidratação de couro ou remoção de manchas difíceis, a Magyk Clean oferece um atendimento personalizado, pensado para quem valoriza cada passo.
+                    
+                    Com carinho, dedicação e excelência, a Magyk Clean entrega mais do que tênis limpos: devolve histórias, memórias e a sensação de usar algo novo outra vez.
+                    
+                    Se você é apaixonado por sneakers e quer manter seus pares sempre impecáveis, a Magyk Clean é a escolha certa para você.                  
+                </p>
+              
             </div>
         </div>
-        <div class="services">
+        <div class="services" id="services">
             <h1>Serviços</h1>
             <hr>
             <div class="services-list">
@@ -86,11 +96,34 @@
                 </ul>
             </div>
         </div>
-        <div class="contact">
+        <div class="feedbacks">
+            <h1>Trabalhos & Feedbacks</h1>
+            <hr>
+            <div class="jobs">
+                <div class="comparison-container">
+                    <div class="comparison-before">
+                        <img src="./src/img/at1.jpg" alt="Antes">
+                        <div class="label">Antes</div>
+                    </div>
+                    <div class="comparison-after">
+                        <img src="./src/img/dp1.jpg" alt="Depois">
+                        <div class="label">Depois</div>
+                    </div>
+                    <div class="slider-handle"></div>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="comparison-slider">
+                </div>
+                <div class="feedback-message">
+                    <img src="./src/img/fbd.jpg" alt="Mensagem de Feedback" />
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
             <h1>Contato</h1>
             <hr>
             <div class="contact-info">
-
+                <a href="https://instagram.com/magykclean" target="_blank"><img src="./src/img/1161953_instagram_icon.png" alt="insta"></a>
+                <a href="https://wa.me/+5519984003707" target="_blank"><img src="./src/img/843786_whatsapp_icon.png" alt="whats"></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ooliveiraenzo5@gmail.com&su=Contato%20via%20Site&body=Olá,%20gostaria%20de%20informações." target="_blank"><img src="./src/img/1181190_email_gmail_google_mail_icon.png" alt="gmail"></a>
             </div>
         </div>
     </div>
