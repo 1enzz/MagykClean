@@ -6,15 +6,20 @@ function divScroll(elementId){
     });
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('comparison-slider');
-    const before = document.querySelector('.comparison-before');
-    const handle = document.querySelector('.slider-handle');
+    const sliders = document.querySelectorAll('.comparison-slider');
     
-    if (slider && before && handle) {
+    sliders.forEach(slider => {
+       
+        const container = slider.closest('.comparison-container');
+        const before = container.querySelector('.comparison-before');
+        const handle = container.querySelector('.slider-handle');
+        
         slider.addEventListener('input', function() {
             const value = this.value;
             before.style.width = value + '%';
             handle.style.left = value + '%';
         });
-    }
+   
+        slider.dispatchEvent(new Event('input'));
+    });
 });
