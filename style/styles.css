@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(247, 243, 243);
+    background-color: white(0, 174, 255, 0.308);
 }
 .header {
     display: flex;
@@ -82,22 +82,40 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%; 
+    padding: 1rem; 
+    box-sizing: border-box; 
 }
-.services-list{
-    display: grid;
-    flex-direction: row;
+
+.services-list {
+    width: 100%;
+    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    box-sizing: border-box; 
 }
 
 .services-list hr{
     border: 0.5px solid #2196F3;
     width: 100%;
+    
 }
+
 .service-list {
-    list-style-type: disc;
+    padding-left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 .service-list li{
+    display: flex; 
+    justify-content: space-between;
     transition: transform 0.5s;
+    padding-left: 1rem;
 }
+
 .service-list li:hover{
     transform: translateY(-5px); 
     transition: 0.5s;
