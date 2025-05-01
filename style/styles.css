@@ -322,9 +322,8 @@ transition: transform 0.5s;
 
 
 
-/* Media Queries para Desktop */
 @media (min-width: 768px) {
-    /* Header */
+
     .header {
         justify-content: space-between;
         padding: 0 2rem;
