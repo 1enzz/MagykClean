@@ -469,7 +469,12 @@ li a{
 .alt span i{
     animation: pulse 2s infinite alternate;
 }
-
+.alt span{
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
 .location {
     width: 100%;
     padding: 2rem 0;
@@ -541,8 +546,16 @@ li a{
         width: 100px;
         height: 4px;
     }
+
 }
 
+.feedbacks h1 {
+    font-size: 1.6rem; 
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .contact{
     display: flex;
