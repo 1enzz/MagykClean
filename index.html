@@ -33,12 +33,19 @@
                 <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
             </div>
         </div>
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="./src/img/promo2.jpg" alt="Slide 1">
-                <img src="./src/img/at1.2.jpg" alt="Slide 2">
-                <img src="./src/img/at3.jpg" alt="Slide 3">
-                <img src="./src/img/dp3.jpg" alt="Slide 4">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="./src/img/promo2.jpg" alt="Slide 1" class="main-image">
+                    <img src="./src/img/at1.2.jpg" alt="Slide 2">
+                    <img src="./src/img/at3.jpg" alt="Slide 3">
+                    <img src="./src/img/dp3.jpg" alt="Slide 4">
+                </div>
+            </div>
+            <div class="carousel-text">
+                <h2>MAGYK CLEAN</h2>
+                <p>Coleta <b>GRATUITA</b> Alphaville e região</p>
+                <!-- <p>Utilizamos produtos premium e técnicas avançadas para garantir os melhores resultados.</p> -->
             </div>
         </div>
         <div class="about" id="about">
@@ -107,12 +114,32 @@
                         <img src="./src/img/dp4.jpg" alt="Depois">
                         <div class="label">Depois</div>
                     </div>
-                    <div class="slider-handle"></div>
+                    <div class="slider-handle">  <div class="handle-circle">
+                        <img src="./src/img/cleanGlow.png" alt="Arraste para comparar" class="glow-icon">
+                      </div></div>
                     <input type="range" min="0" max="100" value="100" class="slider comparison-slider">
+                </div>
+                <div class="alt">
+                    <span>Arraste para ver a <i>Magya</i> acontecer</span>
                 </div>
                 <div class="feedback-message">
                     <img src="./src/img/fbd.jpg" alt="Mensagem de Feedback" />
                 </div>
+            </div>
+        </div>
+        <div class="location">
+            <div class="location-content">
+                <h1>Onde Estamos</h1>
+            </div>
+            <div class="map-container">
+                <iframe loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=alameda+america+101&output=embed">
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
         <div class="contact" id="contact">
@@ -139,3 +166,5 @@
     </div>
 </body>
 </html>
+
+
