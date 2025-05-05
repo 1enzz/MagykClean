@@ -113,7 +113,7 @@ body {
         width: 100%;
         height: 100%;
         animation: none;
-        display: block; /* Muda de flex para block */
+        display: block; 
     }
     
     .carousel-images img:not(.main-image) {
@@ -123,12 +123,12 @@ body {
     .carousel-images .main-image {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Mostra imagem completa */
+        object-fit: contain; 
         object-position: center;
         border-radius: 8px;
     }
     
-    /* Linha separadora */
+
     .carousel::after {
         content: "";
         position: absolute;
@@ -149,7 +149,7 @@ body {
         background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.95) 100%);
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        margin-left: -40px; /* Sobreposição sutil */
+        margin-left: -40px;
         position: relative;
         z-index: 2;
         transform: perspective(1000px) rotateY(-5deg);
@@ -489,15 +489,7 @@ li a{
     font-weight: 600;
 }
 
-.location h1::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: #2196F3;
-    margin: 0.5rem auto 0;
-    border-radius: 3px;
-}
+
 
 .map-container {
     width: calc(100% - 2rem); 
@@ -506,7 +498,7 @@ li a{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(33, 150, 243, 0.2);
+
 }
 
 .map-container iframe {
@@ -516,7 +508,7 @@ li a{
     border: none;
 }
 
-/* Media Queries para responsividade */
+
 @media (min-width: 768px) {
     .location {
         padding: 3rem 2rem;
