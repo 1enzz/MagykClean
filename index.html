@@ -25,15 +25,15 @@
         </div>
     </div>
     <div class="content">
-        <div class="targe">
+        <!-- <div class="targe">
             <div class="targe-inner">
                 <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span>
                 <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
                 <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
                 <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
             </div>
-        </div>
-        <div class="carousel-container">
+        </div> -->
+        <!-- <div class="carousel-container">
             <div class="carousel">
                 <div class="carousel-images">
                     <img src="./src/img/promo2.jpg" alt="Slide 1" class="main-image">
@@ -45,10 +45,24 @@
             <div class="carousel-text">
                 <h2>MAGYK CLEAN</h2>
                 <p>Coleta <b>GRATUITA</b> Alphaville e região</p>
-                <!-- <p>Utilizamos produtos premium e técnicas avançadas para garantir os melhores resultados.</p> -->
+               <p>Utilizamos produtos premium e técnicas avançadas para garantir os melhores resultados.</p> 
+            </div>
+        </div> -->
+
+        <div class="video-hero">
+            <div class="video-container">
+                <video autoplay muted loop playsinline controls>
+                    <source src="./src/vid/snk.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5
+                </video>
+            </div>
+            <div class="video-content">
+                <h2>Transformação <span class="glow-span">Magyka</span></h2>
+                <p>Assista ao poder da nossa limpeza profissional</p>
+                <a href="#services" class="cta-button">Quero meus tênis assim!</a>
             </div>
         </div>
-        <div class="about" id="about">
+        <div class="about fade-in" id="about">
             <h1>Sobre</h1>
             <hr>
             <div class="text-about">
@@ -57,7 +71,7 @@
               
             </div>
         </div>
-        <div class="services" id="services">
+        <div class="services fade-in delay-1" id="services">
             <h1>Serviços <i>&</i> Preços</h1>
             <hr>
             <div class="services-list">
@@ -101,7 +115,7 @@
                 </ul>
             </div>
         </div>
-        <div class="feedbacks" id="feedbacks">
+        <div class="feedbacks fade-in delay-2" id="feedbacks">
             <h1>Trabalhos <i>&</i> Feedbacks</h1>
             <hr>
             <div class="jobs">
@@ -120,20 +134,17 @@
                     <input type="range" min="0" max="100" value="100" class="slider comparison-slider">
                 </div>
                 <div class="alt">
-                    <span>Arraste para ver a <i>Magya</i> acontecer</span>
+                    <span>Arraste para ver a <span><i>Magya</i></span> acontecer</span>
                 </div>
                 <div class="feedback-message">
                     <img src="./src/img/fbd.jpg" alt="Mensagem de Feedback" />
                 </div>
             </div>
         </div>
-        <div class="location">
-            <div class="location-content">
-                <h1>Onde Estamos</h1>
-                <hr>
-            </div>
-            
-            <div class="map-container">
+        <div class="location fade-in delay-3">
+            <h1>Onde Estamos</h1>
+            <hr>
+            <div style ="margin-top: 8px;" class="map-container">
                 <iframe loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=alameda+america+101&output=embed">
                         width="600" 
                         height="450" 
@@ -144,7 +155,7 @@
                 </iframe>
             </div>
         </div>
-        <div class="contact" id="contact">
+        <div class="contact fade-in delay-4" id="contact">
             <h1>Contato</h1>
             <hr>
             <div class="contact-info">

@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 100);
+});
 function divScroll(elementId){
     let div = document.getElementById(elementId)
     div.scrollIntoView({
@@ -21,5 +32,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
    
         slider.dispatchEvent(new Event('input'));
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible'); 
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeElements.forEach(element => {
+        observer.observe(element);
+
+        element.addEventListener('animationend', function() {
+            this.style.animation = 'none';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 10);
+        });
     });
 });
