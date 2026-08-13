@@ -1,0 +1,6 @@
+# Configuração local do Claude Code (servidor de preview)
+.claude/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store

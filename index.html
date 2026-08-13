@@ -3,186 +3,590 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Magyk Clean - Serviços profissionais de limpeza e restauração de tênis">
-    <title>Magyk Clean</title>
-    <link rel="shortcut icon" type="imagex/png" href="./src/img/magyklogo.jpg">
+    <meta name="description" content="Magyk Clean — limpeza, hidratação e restauração de tênis em Santana de Parnaíba. Coleta e entrega grátis. 20% de desconto na primeira lavagem.">
+    <meta name="theme-color" content="#0a0d12">
+    <title>Magyk Clean — Limpeza e Restauração de Tênis</title>
+
+    <link rel="shortcut icon" type="image/jpeg" href="./src/img/magyklogo.jpg">
     <link rel="stylesheet" href="./style/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="./js/functions.js"></script>
+    <script src="./js/functions.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <div class="main-img">
-            <span ><img id="img-lg" src="./src/img/magyklogo.jpg" alt=""></span>
-        </div>
-        <div class="header-content">
-            <ul class="nav-list">
-                <li onclick="divScroll('about')">Sobre</li>
-                <li onclick="divScroll('services')">Serviços</li>
-                <li onclick="divScroll('feedbacks')">Feedbacks</li>
-                <li onclick="divScroll('contact')">Contatos</li>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header class="site-header" id="top">
+    <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="Magyk Clean — início">
+            <picture>
+                <source srcset="./src/img/magyklogo.webp" type="image/webp">
+                <img src="./src/img/magyklogo.jpg" alt="Logo da Magyk Clean" width="52" height="52">
+            </picture>
+            <span class="brand-name">Magyk <em>Clean</em></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="navMenu">
+            <ul>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#works">Trabalhos</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <a class="btn btn-primary btn-sm nav-cta"
+               href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento"
+               target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"></use></svg>
+                Falar no WhatsApp
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">Santana de Parnaíba &middot; Coleta e entrega grátis</p>
+            <h1>Seu tênis de volta <span class="glow-span">como novo</span></h1>
+            <p class="lede">
+                Limpeza, hidratação e restauração feitas à mão, com produtos premium.
+                Do casual ao de luxo — a gente busca, cuida e devolve.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#services">Ver serviços e preços</a>
+                <a class="btn btn-ghost"
+                   href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento"
+                   target="_blank" rel="noopener">
+                    <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"></use></svg>
+                    Chamar no WhatsApp
+                </a>
+            </div>
+            <ul class="hero-badges">
+                <li>Coleta e entrega sem taxa</li>
+                <li>Pix, crédito e débito</li>
+                <li>Qualquer tipo de tênis</li>
             </ul>
         </div>
-    </div>
-    <div class="content">
-        <div class="targe">
-            <div class="targe-inner">
-                <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span>
-                <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
-                <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
-                <span>20% DE DESCONTO NA SUA PRIMEIRA LAVAGEM!</span> 
-            </div>
-        </div>
-        <!-- <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="./src/img/promo2.jpg" alt="Slide 1" class="main-image">
-                    <img src="./src/img/at1.2.jpg" alt="Slide 2">
-                    <img src="./src/img/at3.jpg" alt="Slide 3">
-                    <img src="./src/img/dp3.jpg" alt="Slide 4">
-                </div>
-            </div>
-            <div class="carousel-text">
-                <h2>MAGYK CLEAN</h2>
-                <p>Coleta <b>GRATUITA</b> Alphaville e região</p>
-               <p>Utilizamos produtos premium e técnicas avançadas para garantir os melhores resultados.</p> 
-            </div>
-        </div> -->
 
-        <div class="video-hero">
-            <div class="video-container">
-                <video autoplay muted loop playsinline controls>
+        <figure class="hero-video">
+            <div class="phone-frame">
+                <video id="heroVideo" autoplay muted loop playsinline preload="metadata">
                     <source src="./src/vid/snk.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos HTML5
+                    Seu navegador não suporta vídeos HTML5.
                 </video>
+                <button class="sound-toggle" id="soundToggle" aria-label="Ativar som do vídeo" aria-pressed="false">
+                    <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-muted"></use></svg>
+                </button>
             </div>
-            <div class="video-content">
-                <h2>Transformação <span class="glow-span">Mágica</span></h2>
-                <p>Assista ao poder da nossa limpeza profissional</p>
-                <a href="#services" class="cta-button">Quero meus tênis assim!</a>
-            </div>
-        </div>
-        <div class="about fade-in" id="about">
-            <h1>Sobre</h1>
-            <hr>
-            <div class="text-about">
-                <p>A Magyk Clean é uma empresa especializada em serviços de limpeza e restauração de tênis, oferecendo um trabalho impecável e de alta qualidade para seus clientes. Com um time altamente treinado e comprometido, a empresa utiliza técnicas avançadas e produtos de primeira linha para garantir que seu calçado, seja ele casual, esportivo ou de luxo, receba o tratamento adequado e volte a ter a aparência de novo.                
-                </p>
-              
-            </div>
-        </div>
-        <div class="services fade-in delay-1" id="services">
-            <h1>Serviços <i>&</i> Preços</h1>
-            <hr>
-            <div class="services-list">
-<p class="service-hint">
-    Clique em um dos serviços abaixo para agendar pelo WhatsApp
-    <img class="whats-icon-inline" src="./src/img/843786_whatsapp_icon.png" alt="WhatsApp">
-</p>
-                <ul class="service-list">
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Higienização" target="_blank">Higienização </a><span>R$50,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Hidratação+da+Camurça" target="_blank">Hidratação da Camurça </a><span>R$30,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Hidratação+do+Couro" target="_blank">Hidratação do Couro </a><span>R$30,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Desodorização" target="_blank">Desodorização </a><span>R$30,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+AntiCrease" target="_blank">Anti Crease </a><span>R$40,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Impermeabilização" target="_blank">Impermeabilização </a><span>R$40,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+" target="_blank">Colagem </a><span>R$50,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Pintura+do+Midsole" target="_blank">Pintura Midsole </a><span>R$70,00</span>
-                    </li>
-                    <hr>
-                    <li>
-                        <a href="https://wa.me/+5511945933070?text=Olá%2C+gostaria+de+agendar+um+serviço+de+Restauração" target="_blank">Restauração </a><span>R$110,00</span>
-                    </li>
-                    <hr>
+            <figcaption>Processo real de higienização — Magyk Clean</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- ============================================================
+     TARJA PROMOCIONAL
+============================================================ -->
+<div class="marquee" role="note" aria-label="20% de desconto na sua primeira lavagem">
+    <div class="marquee-track">
+        <span>20% de desconto na sua primeira lavagem</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>20% de desconto na sua primeira lavagem</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>20% de desconto na sua primeira lavagem</span>
+        <span aria-hidden="true">&bull;</span>
+        <span>20% de desconto na sua primeira lavagem</span>
+        <span aria-hidden="true">&bull;</span>
+    </div>
+</div>
+
+<!-- ============================================================
+     SERVIÇOS E PREÇOS
+     >>> EDITAR AQUI para mudar a tabela de preços <<<
+============================================================ -->
+<section class="section" id="services">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <p class="eyebrow">Tabela</p>
+            <h2>Serviços <i>&amp;</i> Preços</h2>
+            <p class="section-sub">Toque em um serviço para já abrir o WhatsApp com a mensagem pronta.</p>
+        </header>
+
+        <ul class="service-grid reveal">
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Higieniza%C3%A7%C3%A3o" target="_blank" rel="noopener">
+                    <span class="service-name">Higienização</span>
+                    <span class="service-price">R$&nbsp;60</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Hidrata%C3%A7%C3%A3o+da+Camur%C3%A7a" target="_blank" rel="noopener">
+                    <span class="service-name">Hidratação da Camurça</span>
+                    <span class="service-price">R$&nbsp;30</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Hidrata%C3%A7%C3%A3o+do+Couro" target="_blank" rel="noopener">
+                    <span class="service-name">Hidratação do Couro</span>
+                    <span class="service-price">R$&nbsp;30</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Desodoriza%C3%A7%C3%A3o" target="_blank" rel="noopener">
+                    <span class="service-name">Desodorização</span>
+                    <span class="service-price">R$&nbsp;35</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Anti+Crease" target="_blank" rel="noopener">
+                    <span class="service-name">Anti Crease</span>
+                    <span class="service-price">R$&nbsp;45</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Impermeabiliza%C3%A7%C3%A3o" target="_blank" rel="noopener">
+                    <span class="service-name">Impermeabilização</span>
+                    <span class="service-price">R$&nbsp;45</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Colagem" target="_blank" rel="noopener">
+                    <span class="service-name">Colagem</span>
+                    <span class="service-price">R$&nbsp;50</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Pintura+do+Midsole" target="_blank" rel="noopener">
+                    <span class="service-name">Pintura Midsole</span>
+                    <span class="service-price">R$&nbsp;75</span>
+                </a>
+            </li>
+            <li class="is-featured">
+                <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+gostaria+de+agendar+um+servi%C3%A7o+de+Restaura%C3%A7%C3%A3o" target="_blank" rel="noopener">
+                    <span class="service-name">Restauração</span>
+                    <span class="service-price">R$&nbsp;120</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- =========================================================
+             COMBOS / PACOTES — estrutura pronta, ainda sem oferta.
+             Para ativar: remova o atributo hidden do <div> abaixo
+             e ajuste nome, itens e preço de cada pacote.
+        ========================================================= -->
+        <div class="combo-grid reveal" hidden>
+            <article class="combo">
+                <h3>Nome do combo</h3>
+                <ul>
+                    <li>Serviço incluso 1</li>
+                    <li>Serviço incluso 2</li>
                 </ul>
-            </div>
+                <p class="combo-price"><s>R$ 000</s> <strong>R$ 000</strong></p>
+                <a class="btn btn-primary btn-sm" href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+quero+o+combo" target="_blank" rel="noopener">Quero esse combo</a>
+            </article>
         </div>
-        <div class="feedbacks fade-in delay-2" id="feedbacks">
-            <h1>Trabalhos <i>&</i> Feedbacks</h1>
-            <hr>
-            <div class="alt">
-                <span>⬅️ ARRASTE PARA VER A <span><i>TRANSFORMAÇÃO</i></span> ➡️</span>
-            </div>
-            <div class="jobs">
-                <div class="comparison-container">
-                    <div class="comparison-before">
-                        <img src="./src/img/at4.jpg" alt="Antes">
-                        <div class="label">Antes</div>
-                    </div>
-                    <div class="comparison-after">
-                        <img src="./src/img/dp4.jpg" alt="Depois">
-                        <div class="label">Depois</div>
-                    </div>
-                    <div class="slider-handle">  <div class="handle-circle">
-                        <img src="./src/img/cleanGlow.png" alt="Arraste para comparar" class="glow-icon">
-                      </div></div>
-                    <input type="range" min="0" max="100" value="100" class="slider comparison-slider">
-                </div>
 
-                <div class="feedback-message">
-                    <img src="./src/img/fbd.jpg" alt="Mensagem de Feedback" />
+        <p class="section-note reveal">
+            Não achou o que precisa? <a href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida+sobre+os+servi%C3%A7os" target="_blank" rel="noopener">Manda uma foto do tênis no WhatsApp</a> que a gente avalia sem compromisso.
+        </p>
+    </div>
+</section>
+
+<!-- ============================================================
+     ANTES & DEPOIS
+============================================================ -->
+<section class="section section-alt" id="works">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <p class="eyebrow">Portfólio</p>
+            <h2>Antes <i>&amp;</i> Depois</h2>
+            <p class="section-sub">
+                <span class="drag-hint">Arraste para ver a <i>transformação</i></span>
+            </p>
+        </header>
+
+        <div class="works-grid">
+
+            <figure class="work reveal">
+                <div class="compare" data-compare>
+                    <div class="compare-after">
+                        <picture>
+                            <source srcset="./src/img/dp3.webp" type="image/webp">
+                            <img src="./src/img/dp3.jpg" alt="Nike Air Force 1 branco depois da higienização" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--after">Depois</span>
+                    </div>
+                    <div class="compare-before">
+                        <picture>
+                            <source srcset="./src/img/at3.webp" type="image/webp">
+                            <img src="./src/img/at3.jpg" alt="Nike Air Force 1 branco encardido antes da higienização" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--before">Antes</span>
+                    </div>
+                    <div class="compare-handle" aria-hidden="true">
+                        <span class="handle-grip">
+                            <img src="./src/img/cleanGlow.png" alt="" class="handle-icon">
+                        </span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" step="0.1"
+                           class="compare-range" aria-label="Comparar antes e depois — Nike Air Force 1">
                 </div>
+                <figcaption>Nike Air Force 1 &middot; Higienização profunda</figcaption>
+            </figure>
+
+            <figure class="work reveal">
+                <div class="compare" data-compare>
+                    <div class="compare-after">
+                        <picture>
+                            <source srcset="./src/img/dp4.webp" type="image/webp">
+                            <img src="./src/img/dp4.jpg" alt="Adidas Campus de camurça depois da limpeza e hidratação" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--after">Depois</span>
+                    </div>
+                    <div class="compare-before">
+                        <picture>
+                            <source srcset="./src/img/at4.webp" type="image/webp">
+                            <img src="./src/img/at4.jpg" alt="Adidas Campus de camurça sujo antes da limpeza" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--before">Antes</span>
+                    </div>
+                    <div class="compare-handle" aria-hidden="true">
+                        <span class="handle-grip">
+                            <img src="./src/img/cleanGlow.png" alt="" class="handle-icon">
+                        </span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" step="0.1"
+                           class="compare-range" aria-label="Comparar antes e depois — Adidas Campus">
+                </div>
+                <figcaption>Adidas Campus &middot; Limpeza + hidratação da camurça</figcaption>
+            </figure>
+
+            <figure class="work reveal">
+                <div class="compare" data-compare>
+                    <div class="compare-after">
+                        <picture>
+                            <source srcset="./src/img/dp1.webp" type="image/webp">
+                            <img src="./src/img/dp1.jpg" alt="Nike Jordan 1 Low depois da higienização" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--after">Depois</span>
+                    </div>
+                    <div class="compare-before">
+                        <picture>
+                            <source srcset="./src/img/at2.webp" type="image/webp">
+                            <img src="./src/img/at2.jpg" alt="Nike Jordan 1 Low manchado antes da higienização" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="compare-label compare-label--before">Antes</span>
+                    </div>
+                    <div class="compare-handle" aria-hidden="true">
+                        <span class="handle-grip">
+                            <img src="./src/img/cleanGlow.png" alt="" class="handle-icon">
+                        </span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" step="0.1"
+                           class="compare-range" aria-label="Comparar antes e depois — Jordan 1 Low">
+                </div>
+                <figcaption>Jordan 1 Low &middot; Higienização + recuperação da entressola</figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     COMO FUNCIONA
+============================================================ -->
+<section class="section" id="how">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <p class="eyebrow">Simples assim</p>
+            <h2>Como funciona</h2>
+        </header>
+
+        <ol class="steps">
+            <li class="step reveal">
+                <span class="step-num">1</span>
+                <h3>Você chama no WhatsApp</h3>
+                <p>Manda uma foto do tênis. A gente responde com o serviço indicado e o valor, sem compromisso.</p>
+            </li>
+            <li class="step reveal">
+                <span class="step-num">2</span>
+                <h3>A gente busca</h3>
+                <p>Coleta na sua casa <strong>sem taxa nenhuma</strong>. Se preferir, você deixa direto na loja em Santana de Parnaíba.</p>
+            </li>
+            <li class="step reveal">
+                <span class="step-num">3</span>
+                <h3>Cuidado à mão</h3>
+                <p>Limpeza manual com produtos premium, do jeito certo pra cada material — couro, camurça, knit ou tecido.</p>
+            </li>
+            <li class="step reveal">
+                <span class="step-num">4</span>
+                <h3>Entrega em casa</h3>
+                <!-- >>> EDITAR: troque "X dias úteis" pelo prazo real <<< -->
+                <p>Devolvemos na sua porta em <strong>X dias úteis</strong>, também sem taxa. Pagamento em Pix, crédito ou débito.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============================================================
+     DEPOIMENTOS
+============================================================ -->
+<section class="section section-alt" id="testimonials">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <p class="eyebrow">Quem já provou</p>
+            <h2>Feedbacks</h2>
+        </header>
+
+        <div class="testimonial-grid">
+
+            <!-- DEPOIMENTO REAL (origem: src/img/fbd.jpg) -->
+            <blockquote class="testimonial reveal">
+                <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>“Opa, trabalho insano mano! 🔥 Ficou excelente!!!”</p>
+                <footer><cite>Cliente via WhatsApp</cite></footer>
+            </blockquote>
+
+            <!-- ==========================================================
+                 PLACEHOLDER — DEPOIMENTOS FICTÍCIOS
+                 Servem apenas para demonstrar o layout.
+                 TROQUE por mensagens reais de clientes ANTES de publicar.
+            ========================================================== -->
+            <blockquote class="testimonial reveal" data-placeholder>
+                <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>“Meu Air Force tava pra ser aposentado e voltou parecendo da caixa. Buscaram e entregaram em casa, sem cobrar nada a mais.”</p>
+                <footer><cite>Rafael M. &middot; Nike Air Force 1</cite></footer>
+            </blockquote>
+
+            <blockquote class="testimonial reveal" data-placeholder>
+                <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>“Camurça é osso de limpar e eu já tinha desistido do meu Campus. Voltou com a cor uniforme de novo. Recomendo demais.”</p>
+                <footer><cite>Beatriz S. &middot; Adidas Campus</cite></footer>
+            </blockquote>
+
+            <blockquote class="testimonial reveal" data-placeholder>
+                <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>“Mandei um Jordan bem detonado só pra testar. Atendimento rápido no zap e o resultado passou o que eu esperava.”</p>
+                <footer><cite>Lucas P. &middot; Jordan 1 Low</cite></footer>
+            </blockquote>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SOBRE
+============================================================ -->
+<section class="section" id="about">
+    <div class="wrap about-wrap">
+        <div class="about-copy reveal">
+            <p class="eyebrow">A marca</p>
+            <h2>Sobre a Magyk Clean</h2>
+            <p>
+                A Magyk Clean é especializada em limpeza e restauração de tênis. Trabalhamos com técnicas
+                avançadas e produtos de primeira linha para que cada par — casual, esportivo ou de luxo —
+                receba o tratamento certo e volte a ter cara de novo.
+            </p>
+            <p>
+                Nada aqui é feito em máquina: o processo é manual, peça por peça, com o material de cada
+                tênis levado em conta. É por isso que a gente consegue devolver pares que o dono já tinha
+                dado como perdidos.
+            </p>
+            <div class="stats">
+                <div class="stat"><strong>9</strong><span>serviços</span></div>
+                <div class="stat"><strong>0</strong><span>taxa de coleta</span></div>
+                <div class="stat"><strong>100%</strong><span>feito à mão</span></div>
             </div>
         </div>
-        <div class="location fade-in delay-3">
-            <h1>Onde Estamos</h1>
-            <hr>
-            <div style ="margin-top: 8px;" class="map-container">
-                <iframe loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=alameda+america+101&output=embed">
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <div class="about-media reveal">
+            <picture>
+                <source srcset="./src/img/dp3.webp" type="image/webp">
+                <img src="./src/img/dp3.jpg" alt="Par de Nike Air Force 1 restaurado pela Magyk Clean" loading="lazy" decoding="async">
+            </picture>
         </div>
-        <div class="contact fade-in delay-4" id="contact">
-            <h1>Contato</h1>
-            <hr>
-            <div class="contact-info">
-                <a href="https://instagram.com/magykclean" target="_blank"><img src="./src/img/1161953_instagram_icon.png" alt="insta"></a>
-                <a href="https://wa.me/+5511945933070" target="_blank"><img src="./src/img/843786_whatsapp_icon.png" alt="whats"></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=magykclean@gmail.com&su=Contato%20via%20Site&body=Olá,%20gostaria%20de%20informações." target="_blank"><img src="./src/img/1181190_email_gmail_google_mail_icon.png" alt="gmail"></a>
+    </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+============================================================ -->
+<section class="section section-alt" id="faq">
+    <div class="wrap wrap-narrow">
+        <header class="section-head reveal">
+            <p class="eyebrow">Dúvidas</p>
+            <h2>Perguntas frequentes</h2>
+        </header>
+
+        <div class="faq reveal">
+            <details>
+                <summary>Vocês aceitam qualquer tipo de tênis?</summary>
+                <p>Sim, qualquer tipo. Couro, camurça, knit, tecido, branco encardido — cada material tem um processo próprio e a gente trabalha com todos eles.</p>
+            </details>
+
+            <details>
+                <summary>Como funciona a coleta e a entrega? Tem taxa?</summary>
+                <p>Sem taxa nenhuma. A gente busca o tênis onde você estiver e devolve no mesmo endereço. Você também pode deixar direto na loja, se preferir.</p>
+            </details>
+
+            <details>
+                <summary>Quais são as formas de pagamento?</summary>
+                <p>Pix, cartão de crédito e cartão de débito.</p>
+            </details>
+
+            <!-- >>> EDITAR: preencha o prazo real e apague este comentário <<< -->
+            <details>
+                <summary>Quanto tempo demora?</summary>
+                <p>O prazo médio é de <strong>X dias úteis</strong>, contados a partir da coleta. Serviços de restauração e pintura podem levar mais tempo — a gente confirma o prazo exato no WhatsApp antes de começar.</p>
+            </details>
+
+            <!-- >>> EDITAR: confirme a política de garantia ou remova este bloco <<< -->
+            <details>
+                <summary>E se o tênis estiver muito danificado?</summary>
+                <p>Manda uma foto no WhatsApp antes. A gente avalia e fala com sinceridade o que dá e o que não dá pra recuperar, junto com o orçamento. Você decide sem compromisso.</p>
+            </details>
+
+            <details>
+                <summary>Precisa agendar?</summary>
+                <p>Para coleta, sim — é só combinar o dia pelo WhatsApp. Na loja, atendemos de segunda a sexta, das 9h às 18h.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ONDE ESTAMOS
+============================================================ -->
+<section class="section" id="location">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <p class="eyebrow">Visite</p>
+            <h2>Onde estamos</h2>
+        </header>
+
+        <div class="location-grid reveal">
+            <div class="location-info">
+                <h3>Endereço</h3>
+                <p>Alameda América, 101<br>Santana de Parnaíba &middot; SP</p>
+
+                <h3>Horário</h3>
+                <p>Segunda a sexta<br>9h às 18h</p>
+
+                <h3>Coleta e entrega</h3>
+                <p>Buscamos e devolvemos no seu endereço, sem custo adicional.</p>
+
+                <a class="btn btn-primary"
+                   href="https://www.google.com/maps/search/?api=1&query=Alameda+Am%C3%A9rica+101+Santana+de+Parna%C3%ADba+SP"
+                   target="_blank" rel="noopener">Abrir no Google Maps</a>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    title="Mapa — Alameda América, 101, Santana de Parnaíba"
+                    src="https://maps.google.com/maps?q=Alameda+Am%C3%A9rica+101+Santana+de+Parna%C3%ADba+SP&output=embed"
+                    width="600" height="450" style="border:0"
+                    loading="lazy" allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <p>Copyright &copy; 2025 Enzo Oliveira. All rights reserved </p>
+</section>
 
-        <a href="https://github.com/1enzz" target="_blank" style="margin-left: 14px;">
-            <img src="./src/img/4747499-32.png" alt="GitHub">
-          </a>
-          
-          <a href="https://linkedin.com/in/enzz5" target="_blank">
-            <img src="./src/img/1147411_address book_circle_contacts_linkedin_business_icon.png" alt="LinkedIn">
-          </a>
-          
+<!-- ============================================================
+     CONTATO
+============================================================ -->
+<section class="section section-alt" id="contact">
+    <div class="wrap wrap-narrow">
+        <header class="section-head reveal">
+            <p class="eyebrow">Bora?</p>
+            <h2>Fale com a gente</h2>
+            <p class="section-sub">Resposta rápida no WhatsApp, de segunda a sexta.</p>
+        </header>
+
+        <div class="contact-actions reveal">
+            <a class="btn btn-primary btn-lg"
+               href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento"
+               target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"></use></svg>
+                (11) 94593-3070
+            </a>
+        </div>
+
+        <ul class="contact-links reveal">
+            <li>
+                <a href="https://instagram.com/magykclean" target="_blank" rel="noopener">
+                    <img src="./src/img/1161953_instagram_icon.png" alt="" width="28" height="28">
+                    <span>@magykclean</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/5511945933070" target="_blank" rel="noopener">
+                    <img src="./src/img/843786_whatsapp_icon.png" alt="" width="28" height="28">
+                    <span>WhatsApp</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:magykclean@gmail.com?subject=Contato%20via%20Site">
+                    <img src="./src/img/1181190_email_gmail_google_mail_icon.png" alt="" width="28" height="28">
+                    <span>magykclean@gmail.com</span>
+                </a>
+            </li>
+        </ul>
     </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer">
+    <div class="wrap footer-inner">
+        <p class="footer-brand">Magyk <em>Clean</em> &middot; Santana de Parnaíba, SP</p>
+        <p class="footer-legal">
+            &copy; 2026 Enzo Oliveira. All rights reserved.
+            <span class="footer-social">
+                <a href="https://github.com/1enzz" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="./src/img/4747499-32.png" alt="" width="22" height="22">
+                </a>
+                <a href="https://linkedin.com/in/enzz5" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="./src/img/1147411_address book_circle_contacts_linkedin_business_icon.png" alt="" width="22" height="22">
+                </a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+<!-- Botão flutuante do WhatsApp -->
+<a class="fab-whats"
+   href="https://wa.me/5511945933070?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+um+or%C3%A7amento"
+   target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whats"></use></svg>
+    <span>Fale conosco</span>
+</a>
+
+<!-- Sprite de ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-whats" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/>
+        <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.41a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23z"/>
+    </symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M11 5 6.5 9H3v6h3.5L11 19V5zm5.6 3.4 1.4 1.4L16.4 12l1.6 2.2-1.4 1.4L15 13.4 13.4 15.6 12 14.2 13.6 12 12 9.8l1.4-1.4L15 10.6l1.6-2.2z"/>
+    </symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M11 5 6.5 9H3v6h3.5L11 19V5zm4.2 1.6a1 1 0 0 0-1 1.7 4.6 4.6 0 0 1 0 7.4 1 1 0 0 0 1 1.7 6.6 6.6 0 0 0 0-10.8zm-1.9 2.8a1 1 0 0 0-1 1.7 1.1 1.1 0 0 1 0 1.8 1 1 0 0 0 1 1.7 3.1 3.1 0 0 0 0-5.2z"/>
+    </symbol>
+</svg>
+
 </body>
 </html>
-
-
